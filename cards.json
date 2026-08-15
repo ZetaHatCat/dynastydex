@@ -1,0 +1,162 @@
+[
+  {
+    "id": 159,
+    "title": "Roman Empire",
+    "rarity": "t1.0",
+    "artist": "zetahatcat",
+    "rarityClass": "rarity-rainbow",
+    "img": "https://i.postimg.cc/Px4ZHbnH/imagen-2026-08-12-065904254.png"
+  },
+  {
+    "id": 114,
+    "title": "British Empire",
+    "rarity": "t1.0",
+    "artist": "Tea_Land",
+    "rarityClass": "rarity-rainbow",
+    "img": "https://i.postimg.cc/SsDX3ycX/imagen-2026-08-12-065953935.png"
+  },
+  {
+    "id": 138,
+    "title": "Mongol Empire",
+    "rarity": "t1.0",
+    "artist": ".nintendoswitchlite.",
+    "rarityClass": "rarity-rainbow",
+    "img": "https://i.postimg.cc/GhQXhYdn/imagen-2026-08-12-072520610.png"
+  },
+  {
+    "id": 47,
+    "title": "Umayyad Caliphate",
+    "rarity": "t4.0",
+    "artist": "cirno9715",
+    "rarityClass": "rarity-purple",
+    "img": "https://i.postimg.cc/6pqfWmMp/Umayyad-Caliphate.png"
+  },
+  {
+    "id": 85,
+    "title": "Tang Dynasty",
+    "rarity": "t5.0",
+    "artist": "zetahatcat",
+    "rarityClass": "rarity-purple",
+    "img": "https://i.postimg.cc/138DhNzy/imagen-2026-08-12-072733310.png"
+  },
+  {
+    "id": 62,
+    "title": "Qin Dynasty",
+    "rarity": "t6.0",
+    "artist": "cirno9715",
+    "rarityClass": "rarity-purple",
+    "img": "https://i.postimg.cc/NFN2Zgqz/imagen-2026-08-12-072826511.png"
+  },
+  {
+    "id": 91,
+    "title": "Spanish Empire",
+    "rarity": "t7.0",
+    "artist": "alysztia",
+    "rarityClass": "rarity-purple",
+    "img": "https://i.postimg.cc/G2dB2Bb8/imagen-2026-08-12-072920704.png"
+  },
+  {
+    "id": 33,
+    "title": "Byzantine Empire",
+    "rarity": "t8.0",
+    "artist": "ancientdex",
+    "rarityClass": "rarity-purple",
+    "img": "https://i.postimg.cc/7Yf5frrn/299-sin-titulo-20230620224150.png"
+  },
+  {
+    "id": 104,
+    "title": "Russian Empire",
+    "rarity": "t9.0",
+    "artist": "zetahatcat",
+    "rarityClass": "rarity-purple",
+    "img": "https://i.postimg.cc/652QBVCP/imagen-2026-08-12-073107172.png"
+  },
+  {
+    "id": 29,
+    "title": "Napoleonic France",
+    "rarity": "t10.0",
+    "artist": "idiotevanstickman",
+    "rarityClass": "rarity-purple",
+    "img": "https://i.postimg.cc/PfctVL0c/7223A8D8-2DFB-4197-A784-C1C8F33D14B5.png"
+  },
+  {
+    "id": 78,
+    "title": "Holy Roman Empire",
+    "rarity": "t11.0",
+    "artist": "zetahatcat",
+    "rarityClass": "rarity-gold",
+    "img": "https://i.postimg.cc/jqWWjrTV/imagen-2026-08-12-073321342.png"
+  },
+  {
+    "id": 50,
+    "title": "Han Dynasty",
+    "rarity": "t12.0",
+    "artist": "perilouspokey",
+    "rarityClass": "rarity-gold",
+    "img": "https://i.postimg.cc/NMZjX5cJ/image.png"
+  },
+  {
+    "id": 120,
+    "title": "German Empire",
+    "rarity": "t13.0",
+    "artist": "perilouspokey",
+    "rarityClass": "rarity-gold",
+    "img": "https://i.postimg.cc/xCN09nzt/imagen-2026-08-12-073502647.png"
+  },
+  {
+    "id": 15,
+    "title": "Seljuk Empire",
+    "rarity": "t14.0",
+    "artist": "zetahatcat",
+    "rarityClass": "rarity-gold",
+    "img": "https://i.postimg.cc/FHFN7jL2/imagen-2026-08-12-073532226.png"
+  },
+  {
+    "id": 67,
+    "title": "Macedonian Empire",
+    "rarity": "t15.0",
+    "artist": "anjabbon",
+    "rarityClass": "rarity-gold",
+    "img": "https://i.postimg.cc/V6tc34y8/Macedon-Empire.png"
+  },
+  {
+    "id": 88,
+    "title": "Tokugawa Shogunate",
+    "rarity": "t17.0",
+    "artist": "nicollesammy",
+    "rarityClass": "rarity-gold",
+    "img": "https://i.postimg.cc/Dwz327VP/Untitled760-20250421202619.png"
+  },
+  {
+    "id": 42,
+    "title": "Western Roman Empire",
+    "rarity": "t18.0",
+    "artist": "anjabbon",
+    "rarityClass": "rarity-gold",
+    "img": "https://i.postimg.cc/hG7wjj2t/Western-Roman-Empire-Spawnart-Latindex.png"
+  },
+  {
+    "id": 201,
+    "title": "Abbasid Caliphate",
+    "rarity": "t20.0",
+    "artist": "zetahatcat",
+    "rarityClass": "rarity-gold",
+    "img": "https://i.postimg.cc/T1QNSWP6/Abbasid-Caliphate.png"
+  },
+  {
+    "id": 93,
+    "title": "Carolingian Empire",
+    "rarity": "t21.0",
+    "artist": "zetahatcat",
+    "rarityClass": "rarity-orange",
+    "img": "https://i.postimg.cc/0j5cp207/imagen-2026-08-12-073918016.png"
+  },
+  {
+    "id": 11,
+    "title": "Rashidun Caliphate",
+    "rarity": "t22.0",
+    "artist": "Old_dynastydex",
+    "rarityClass": "rarity-orange",
+    "img": "https://i.postimg.cc/pTRNW7bq/nt-zs-AENx-RBc-PBLvcg.png"
+  }
+]

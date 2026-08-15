@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DynastyDex - Updates & Announcements</title>
+
+  <!-- Fuentes futuristas para títulos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================
+       1. FONDO DEGRADADO ANIMADO (COLORES OSCUROS)
+       ========================================================== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(-45deg, #0d0d12, #180e29, #0f172a, #1e0f24);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #ffffff;
+      min-height: 100vh;
+      padding-bottom: 40px;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ==========================================================
+       2. ENCABEZADO Y BOTÓN A LA DERECHA
+       ========================================================== */
+    header {
+      position: relative;
+      text-align: center;
+      padding: 35px 20px 20px 20px;
+    }
+
+    /* Botón colocado en la parte superior DERECHA */
+    .nav-btn {
+      position: absolute;
+      top: 30px;
+      right: 35px;
+      background-color: #1e1e24;
+      color: #ffffff;
+      border: 2px solid #2d2d38;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.25s ease, border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-btn:hover {
+      border-color: #a855f7;
+      box-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
+      color: #a855f7;
+      transform: translateY(-2px);
+    }
+
+    /* Contenedor del título con las espadas */
+    .title-wrapper {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    /* Estilo del Título con animación de resplandor cada 5 segundos */
+    .main-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #ffffff;
+      text-transform: uppercase;
+      animation: glowPulse 5s infinite;
+    }
+
+    @keyframes glowPulse {
+      0%, 80%, 100% {
+        text-shadow: 
+          0 0 10px #a855f7,
+          0 0 20px #8b5cf6,
+          0 0 35px #7c3aed;
+        transform: scale(1);
+      }
+      90% {
+        text-shadow: 
+          0 0 20px #c084fc,
+          0 0 35px #a855f7,
+          0 0 55px #c084fc,
+          0 0 75px #d8b4fe;
+        transform: scale(1.02);
+      }
+    }
+
+    /* Animación de las espadas: 5s girando + 10s ocultas = ciclo total 15s */
+    .sword-icon {
+      font-size: 26px;
+      display: inline-block;
+      animation: spinSwords 15s infinite ease-in-out;
+    }
+
+    @keyframes spinSwords {
+      0% {
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+      }
+      33.33% {
+        transform: rotate(360deg) scale(1);
+        opacity: 1;
+      }
+      35%, 100% {
+        transform: rotate(360deg) scale(0);
+        opacity: 0;
+      }
+    }
+
+    /* ==========================================================
+       3. ANUNCIOS Y CUADROS
+       ========================================================== */
+    .announcements-container {
+      max-width: 850px;
+      margin: 20px auto 0 auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .announcement-card {
+      background-color: rgba(30, 30, 36, 0.85);
+      backdrop-filter: blur(5px);
+      border: 2px solid #2d2d38;
+      border-radius: 14px;
+      padding: 25px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.25s ease;
+    }
+
+    .announcement-card:hover {
+      border-color: #a855f7;
+      box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+    }
+
+    .card-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 19px;
+      color: #a855f7;
+      margin-bottom: 6px;
+    }
+
+    .card-date {
+      font-size: 12.5px;
+      color: #a0a0ab;
+      margin-bottom: 12px;
+    }
+
+    .card-text {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #e4e4e7;
+    }
+
+    /* Estilo e interacción de las imágenes */
+    .announcement-img {
+      width: 100%;
+      max-height: 380px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-top: 15px;
+      border: 1px solid #2d2d38;
+      cursor: zoom-in;
+      transition: transform 0.2s ease;
+    }
+
+    .announcement-img:hover {
+      transform: scale(1.01);
+    }
+
+    .empty-card {
+      border: 2px dashed #2d2d38;
+      background-color: rgba(30, 30, 36, 0.3);
+      min-height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #60606e;
+      font-style: italic;
+    }
+
+    /* ==========================================================
+       4. MODAL/PANTALLA COMPLETA PARA AMPLIAR IMÁGENES
+       ========================================================== */
+    .image-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      cursor: zoom-out;
+    }
+
+    .image-modal img {
+      max-width: 90%;
+      max-height: 90vh;
+      border-radius: 12px;
+      box-shadow: 0 0 30px rgba(168, 85, 247, 0.6);
+      border: 2px solid #a855f7;
+      object-fit: contain;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+      .nav-btn {
+        position: static;
+      }
+      .main-title {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header>
+    <!-- Botón hacia la página de rarezas -->
+    <a href="rarity.html" class="nav-btn">Rarity List →</a>
+
+    <!-- Título con Espadas laterales -->
+    <div class="title-wrapper">
+      <span class="sword-icon">⚔️</span>
+      <h1 class="main-title">DynastyDex Updates and Announcements</h1>
+      <span class="sword-icon">⚔️</span>
+    </div>
+  </header>
+
+  <!-- Contenedor principal -->
+  <main class="announcements-container">
+
+    <!-- ANUNCIO 1 -->
+    <article class="announcement-card">
+      <h2 class="card-title">Título del Anuncio 1</h2>
+      <p class="card-date">Publicado: 15 de Agosto, 2026</p>
+      <p class="card-text">
+        Escribe aquí la información sobre las últimas novedades, parches o cambios importantes del proyecto.
+      </p>
+    </article>
+
+    <!-- ANUNCIO 2 -->
+    <article class="announcement-card">
+      <h2 class="card-title">Título del Anuncio 2</h2>
+      <p class="card-date">Publicado: 10 de Agosto, 2026</p>
+      <p class="card-text">
+        Escribe aquí el texto de otro anuncio o actualización relevante para la comunidad.
+      </p>
+    </article>
+
+    <!-- ANUNCIO 3 -->
+    <article class="announcement-card">
+      <h2 class="card-title">Nuevo Evento o Arte Destacado</h2>
+      <p class="card-date">Publicado: 5 de Agosto, 2026</p>
+      <p class="card-text">
+        Haz clic sobre la imagen para verla en tamaño completo.
+      </p>
+      <img class="announcement-img" src="https://i.postimg.cc/Px4ZHbnH/imagen-2026-08-12-065904254.png" alt="Imagen del Anuncio" onclick="expandImage(this)">
+    </article>
+
+    <!-- ANUNCIO 4 -->
+    <div class="announcement-card empty-card">
+      [ Espacio disponible para próximos anuncios ]
+    </div>
+
+  </main>
+
+  <!-- Ventana desplegable para ampliar imagen -->
+  <div id="imageModal" class="image-modal" onclick="closeImage()">
+    <img id="modalImg" src="" alt="Imagen ampliada">
+  </div>
+
+  <script>
+    function expandImage(element) {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImg');
+      modalImg.src = element.src;
+      modal.style.display = 'flex';
+    }
+
+    function closeImage() {
+      document.getElementById('imageModal').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
