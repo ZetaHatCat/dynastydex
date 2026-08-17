@@ -5,130 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DynastyDex - Updates & Announcements</title>
 
-  <!-- Fuentes futuristas para títulos -->
+  <!-- Fuente formal e industrial "Inter" -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     /* ==========================================================
-       1. FONDO DEGRADADO ANIMADO (COLORES OSCUROS)
+       1. FONDO GENERAL Y BASE (GRIS OSCURO FORMAL)
        ========================================================== */
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
 
     body {
-      background: linear-gradient(-45deg, #0d0d12, #180e29, #0f172a, #1e0f24);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
+      background-color: #121214;
       color: #ffffff;
       min-height: 100vh;
       padding-bottom: 40px;
     }
 
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
     /* ==========================================================
-       2. ENCABEZADO Y BOTÓN A LA DERECHA
+       2. ENCABEZADO Y TÍTULO
        ========================================================== */
     header {
       position: relative;
       text-align: center;
-      padding: 35px 20px 20px 20px;
+      padding: 40px 20px 25px 20px;
     }
 
-    /* Botón colocado en la parte superior DERECHA */
+    /* Botón superior derecho */
     .nav-btn {
       position: absolute;
-      top: 30px;
+      top: 35px;
       right: 35px;
-      background-color: #1e1e24;
+      background-color: #1a1a1e;
       color: #ffffff;
-      border: 2px solid #2d2d38;
+      border: 1px solid #33333d;
       padding: 10px 18px;
       border-radius: 8px;
       font-size: 14px;
       font-weight: 600;
       text-decoration: none;
-      transition: transform 0.25s ease, border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+      transition: transform 0.25s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
     .nav-btn:hover {
-      border-color: #a855f7;
-      box-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
-      color: #a855f7;
+      border-color: #ffffff;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.25);
       transform: translateY(-2px);
     }
 
-    /* Contenedor del título con las espadas */
-    .title-wrapper {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-    }
-
-    /* Estilo del Título con animación de resplandor cada 5 segundos */
+    /* Título principal con resplandor blanco cada 6 segundos */
     .main-title {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 28px;
-      font-weight: 900;
-      letter-spacing: 2px;
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
       color: #ffffff;
       text-transform: uppercase;
-      animation: glowPulse 5s infinite;
+      display: inline-block;
+      animation: whiteGlow 6s infinite ease-in-out;
     }
 
-    @keyframes glowPulse {
+    @keyframes whiteGlow {
       0%, 80%, 100% {
-        text-shadow: 
-          0 0 10px #a855f7,
-          0 0 20px #8b5cf6,
-          0 0 35px #7c3aed;
+        text-shadow: 0 0 2px rgba(255, 255, 255, 0.2);
         transform: scale(1);
       }
       90% {
         text-shadow: 
-          0 0 20px #c084fc,
-          0 0 35px #a855f7,
-          0 0 55px #c084fc,
-          0 0 75px #d8b4fe;
-        transform: scale(1.02);
-      }
-    }
-
-    /* Animación de las espadas: 5s girando + 10s ocultas = ciclo total 15s */
-    .sword-icon {
-      font-size: 26px;
-      display: inline-block;
-      animation: spinSwords 15s infinite ease-in-out;
-    }
-
-    @keyframes spinSwords {
-      0% {
-        transform: rotate(0deg) scale(1);
-        opacity: 1;
-      }
-      33.33% {
-        transform: rotate(360deg) scale(1);
-        opacity: 1;
-      }
-      35%, 100% {
-        transform: rotate(360deg) scale(0);
-        opacity: 0;
+          0 0 15px rgba(255, 255, 255, 0.9),
+          0 0 25px rgba(255, 255, 255, 0.6),
+          0 0 35px rgba(255, 255, 255, 0.4);
+        transform: scale(1.01);
       }
     }
 
     /* ==========================================================
-       3. ANUNCIOS Y CUADROS
+       3. ANUNCIOS Y TARJETAS
        ========================================================== */
     .announcements-container {
       max-width: 850px;
@@ -140,67 +97,55 @@
     }
 
     .announcement-card {
-      background-color: rgba(30, 30, 36, 0.85);
-      backdrop-filter: blur(5px);
-      border: 2px solid #2d2d38;
-      border-radius: 14px;
+      background-color: #1a1a1e;
+      border: 1px solid #2d2d35;
+      border-radius: 12px;
       padding: 25px;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.25s ease;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
     .announcement-card:hover {
-      border-color: #a855f7;
-      box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+      border-color: #444452;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
     }
 
     .card-title {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 19px;
-      color: #a855f7;
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
       margin-bottom: 6px;
     }
 
     .card-date {
       font-size: 12.5px;
-      color: #a0a0ab;
+      color: #8e8e99;
       margin-bottom: 12px;
     }
 
     .card-text {
       font-size: 15px;
       line-height: 1.6;
-      color: #e4e4e7;
+      color: #d1d1d6;
     }
 
-    /* Estilo e interacción de las imágenes */
+    /* Imagen dentro del anuncio */
     .announcement-img {
       width: 100%;
       max-height: 380px;
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: 8px;
       margin-top: 15px;
-      border: 1px solid #2d2d38;
+      border: 1px solid #2d2d35;
       cursor: zoom-in;
       transition: transform 0.2s ease;
     }
 
     .announcement-img:hover {
-      transform: scale(1.01);
-    }
-
-    .empty-card {
-      border: 2px dashed #2d2d38;
-      background-color: rgba(30, 30, 36, 0.3);
-      min-height: 90px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #60606e;
-      font-style: italic;
+      transform: scale(1.005);
     }
 
     /* ==========================================================
-       4. MODAL/PANTALLA COMPLETA PARA AMPLIAR IMÁGENES
+       4. MODAL PARA AMPLIAR IMÁGENES
        ========================================================== */
     .image-modal {
       display: none;
@@ -209,8 +154,8 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background-color: rgba(0, 0, 0, 0.85);
-      backdrop-filter: blur(8px);
+      background-color: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(6px);
       z-index: 1000;
       justify-content: center;
       align-items: center;
@@ -220,9 +165,9 @@
     .image-modal img {
       max-width: 90%;
       max-height: 90vh;
-      border-radius: 12px;
-      box-shadow: 0 0 30px rgba(168, 85, 247, 0.6);
-      border: 2px solid #a855f7;
+      border-radius: 10px;
+      border: 1px solid #444452;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
       object-fit: contain;
     }
 
@@ -246,21 +191,14 @@
 
   <!-- Encabezado -->
   <header>
-    <!-- Botón hacia la página de rarezas -->
     <a href="rarity.html" class="nav-btn">Rarity List →</a>
-
-    <!-- Título con Espadas laterales -->
-    <div class="title-wrapper">
-      <span class="sword-icon">⚔️</span>
-      <h1 class="main-title">DynastyDex Updates and Announcements</h1>
-      <span class="sword-icon">⚔️</span>
-    </div>
+    <h1 class="main-title">DynastyDex Updates and Announcements</h1>
   </header>
 
   <!-- Contenedor principal -->
   <main class="announcements-container">
 
-    <!-- ANUNCIO 2 -->
+    <!-- ANUNCIO 1 -->
     <article class="announcement-card">
       <h2 class="card-title">Open Dex</h2>
       <p class="card-date">Published on August 18, 2026</p>
@@ -269,7 +207,7 @@
       </p>
     </article>
 
-    <!-- ANUNCIO 3 -->
+    <!-- ANUNCIO 2 -->
     <article class="announcement-card">
       <h2 class="card-title">The Seljuk Empire arrives at DynastyDex!</h2>
       <p class="card-date">Published on August 12, 2026</p>
@@ -281,7 +219,7 @@
 
   </main>
 
-  <!-- Ventana desplegable para ampliar imagen -->
+  <!-- Modal para expandir imagen -->
   <div id="imageModal" class="image-modal" onclick="closeImage()">
     <img id="modalImg" src="" alt="Imagen ampliada">
   </div>
